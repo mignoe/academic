@@ -11,6 +11,11 @@ Template para guiar a leitura de artigos.
 
 # Qual o problema?
 
+Os autores bumcam um melhor entendimento de como se dá a organização de colaborações entre os desenvolvedores no desenvolvimento de um projeto de larga escala.
+
+Os autores buscam um melhor entendimento de como a autoria se dá em projetos de larga escala. Como o trabalho é dividido?
+
+-------
 Aqui é importante ser claro e conciso sobre o problema que o artigo aborda. Claro, pode haver mais de um ou desdobramentos do mesmo, mas tipicamente é muito claro o problema que os autores estão tentando resolver. Cuidado aqui para não cair na armadilha de responder algo como "um sistema de recomendação para..." ou "um algoritmo para... " ou "construir uma ferramenta para...". Esses não são problemas, são soluções. Problema tipicamente é "lentidão do algoritmo XPTO"; "dificuldade em revisar grandes PRs"; etc.
 
 Exemplo: "Existing policies fail to capture the all-or-nothing property of transactions: all objects requested in parallel must be present in cache, or there will be little performance improvement because latency is dictated by the slowest access."
@@ -21,9 +26,15 @@ Uma tarefa importante para mostrar que entendeu o problema é explicá-lo com su
 
 ## Como os autores tentam resolver o problema? Criando um algoritmo novo? uma metodologia? uma ferramenta? 
 
+Os autores utilizam o conceito de medidas de autoria de códigos, desenvolvidas em um artigo pública anteriormente, para identificar padrões entre a divisão de trabalho no código do kernel do linux e depois verificar se eles se repetem nos demais repositórios analisados.
+
+Os autores utilizam o Grau de Autoria (Degree of Authorship) e analisam o código fonte de kernel do linux e outros 118 projetos open source de larga escala disponíveis no github.
+
 Exemplo: Os autores apresentam uma nova estratégia de cache específica para lidar com transações. Nessa estratégia, a ideia é levar em consideração a natureza "tudo-ou-nada" das transações. Como prova de conceito, é apresentada um sistema de cache de alta performance chamado dtox, que ...
 
 ## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
+
+Os autores utilizam a métrica Degree of Autorship. 
 
 Exemplo: os autores agrupam objetos de uma transação utilizando uma análise de grafos acíclicos de dependência, através de uma heurística que funciona da seguinte maneira: ...
 
